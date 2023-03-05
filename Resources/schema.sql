@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS review_id_table;
+
 CREATE TABLE review_id_table (
   review_id TEXT PRIMARY KEY NOT NULL,
   customer_id INTEGER,
@@ -6,18 +8,21 @@ CREATE TABLE review_id_table (
   review_date DATE -- this should be in the formate yyyy-mm-dd
 );
 
+DROP TABLE IF EXISTS products;
 -- This table will contain only unique values
 CREATE TABLE products (
   product_id TEXT PRIMARY KEY NOT NULL UNIQUE,
   product_title TEXT
 );
 
+DROP TABLE IF EXISTS customers;
 -- Customer table for first data set
 CREATE TABLE customers (
   customer_id INT PRIMARY KEY NOT NULL UNIQUE,
   customer_count INT
 );
 
+DROP TABLE IF EXISTS vine_table;
 -- vine table
 CREATE TABLE vine_table (
   review_id TEXT PRIMARY KEY,
